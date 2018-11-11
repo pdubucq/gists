@@ -1,0 +1,25 @@
+digraph G {
+
+  graph [rankdir = LR];
+
+  node [shape = ellipse, height=0.05]; BS1 BS2 BS3 Qeg Qgen;
+  node [shape = Mrecord]; Qhk1;
+  node [shape = record, height=2 ,width=1]; 
+
+  SUM; 
+  "a-b" [label="a-b"];
+  "a-b (2)"[label="a-b"];
+  "a/b"[label="a/b"];
+
+
+  "Qeg" -> "a-b" [label="a"];
+  "Qgen" -> "a-b" [label="b"];
+  "a-b" -> "a-b (2)"
+  "a-b (2)" -> "Qhk1"
+  "BS1" -> "SUM"
+  "BS2" -> "SUM"
+  "BS3" -> "SUM"
+  "BS1" -> "a/b" [label=a] 
+  "SUM" -> "a/b" [label=b]
+  "a/b" -> "a-b (2)"
+}

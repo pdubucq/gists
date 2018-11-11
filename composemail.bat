@@ -1,0 +1,1 @@
+call "c:\Program Files (x86)\Mozilla Thunderbird\thunderbird.exe" -compose "attachment='file:///%1'"
